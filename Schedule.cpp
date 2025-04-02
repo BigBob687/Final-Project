@@ -4,9 +4,16 @@
 #include "Schedule.h"
 
 // Constructor
+
 Schedule::Schedule() {}
 
 // Make an appointment
+/**
+ *
+ * @param description
+ * @param hours
+ * @param minutes
+ */
 void Schedule::makeAppointment(const string& description, int hours, int minutes) {
     auto now = chrono::system_clock::now();
     auto appointmentTime = now + chrono::hours(hours) + chrono::minutes(minutes);
@@ -14,6 +21,12 @@ void Schedule::makeAppointment(const string& description, int hours, int minutes
 }
 
 // Follow up on an existing appointment
+/**
+ *
+ * @param previousDescription
+ * @param followUpDescription
+ * @param days
+ */
 void Schedule::followUpAppointment(const string& previousDescription, const string& followUpDescription, int days) {
     for (const auto& appointment : appointments) {
         if (appointment.description == previousDescription) {
@@ -26,6 +39,7 @@ void Schedule::followUpAppointment(const string& previousDescription, const stri
 }
 
 // Display all appointments
+
 void Schedule::displayAppointments() const {
     cout << "Scheduled Appointments:" << endl;
     for (const auto& appointment : appointments) {
@@ -35,6 +49,11 @@ void Schedule::displayAppointments() const {
 }
 
 // Check if an appointment is scheduled at a given time
+/**
+ *
+ * @param time
+ * @return
+ */
 bool Schedule::isAppointmentScheduled(const chrono::system_clock::time_point& time) const {
     for (const auto& appointment : appointments) {
         if (chrono::duration_cast<chrono::minutes>(appointment.time - time).count() == 0) {

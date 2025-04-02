@@ -5,6 +5,7 @@ int main() {
     Schedule mySchedule;
 
     // Create appointments
+
     mySchedule.makeAppointment("Doctor's Appointment", 2, 30);
     mySchedule.makeAppointment("Meeting with Client", 5, 0);
     mySchedule.makeAppointment("Dinner with Family", 8, 15);

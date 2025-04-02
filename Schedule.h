@@ -17,15 +17,32 @@ public:
     Schedule();
 
     // Make an appointment with a description and scheduled time (in hours and minutes from now)
+    /**
+     *
+     * @param description
+     * @param hours
+     * @param minutes
+     */
     void makeAppointment(const string& description, int hours, int minutes);
 
     // Follow up on an existing appointment by scheduling a follow-up after a given duration
+    /**
+     *
+     * @param previousDescription
+     * @param followUpDescription
+     * @param days
+     */
     void followUpAppointment(const string& previousDescription, const std::string& followUpDescription, int days);
 
     // Display all scheduled appointments
     void displayAppointments() const;
 
     // Check if an appointment is scheduled at a given time
+    /**
+     *
+     * @param time
+     * @return bool
+     */
     bool isAppointmentScheduled(const chrono::system_clock::time_point& time) const;
 
 private:

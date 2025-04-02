@@ -52,7 +52,7 @@ void Schedule::displayAppointments() const {
 /**
  *
  * @param time
- * @return
+ * @return bool
  */
 bool Schedule::isAppointmentScheduled(const chrono::system_clock::time_point& time) const {
     for (const auto& appointment : appointments) {

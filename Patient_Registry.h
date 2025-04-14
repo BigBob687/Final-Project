@@ -1,0 +1,37 @@
+//
+// Created by hassa on 3/30/2025.
+//
+
+#ifndef PATIENT_REGISTRY_H
+#define PATIENT_REGISTRY_H
+#include <string>
+
+using namespace std;
+
+class Patient_Registry {
+    public:
+    string Name;
+    string Age;
+    string Gender;
+    string Illness;
+    string DoctorName;
+    string NurseName;
+    string InsuranceName;
+    string Medication;
+    //Date/Time of appointment
+    string DT;
+    //Scheduling Appointment
+    string SA;
+    //Follow Up Appointemnt
+    string FUA;
+
+    //Creating the Registry Constructor
+    Patient_Registry(string name, string age, string gender, string illness, string DN,
+        string NN, string IN, string meds, string dt);
+};
+
+
+
+
+
+#endif //PATIENT_REGISTRY_H

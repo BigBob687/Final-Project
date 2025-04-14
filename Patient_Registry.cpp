@@ -1,0 +1,18 @@
+//
+// Created by hassa on 3/30/2025.
+//
+
+#include "Patient_Registry.h"
+Patient_Registry::Patient_Registry(string name, string age, string gender, string illness, string DN,
+    string NN, string IN, string meds, string dt) {
+
+    Name = name;
+    Age = age;
+    Gender = Gender;
+    Illness = illness;
+    DoctorName = DN;
+    NurseName = NN;
+    InsuranceName = IN;
+    Medication = meds;
+    DT = dt;
+}

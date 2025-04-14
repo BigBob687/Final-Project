@@ -1,12 +1,23 @@
 #include <iostream>
+#include "Schedule.h"
 
-#include "Patient_Registry.h"
-#include "System.h"
-using namespace std;
 int main() {
+    Schedule mySchedule;
 
-    System system = System();
+    // Create appointments
 
-    system.mainMenu();
+    mySchedule.makeAppointment("Doctor's Appointment", 2, 30);
+    mySchedule.makeAppointment("Doctors appointment 2", 5, 0);
+    mySchedule.makeAppointment("Doctors appointment 3", 8, 15);
+
+    // Display current appointments
+    mySchedule.displayAppointments();
+
+    // Schedule a follow-up appointment
+    mySchedule.followUpAppointment("Doctor's Appointment", "Follow-up Checkup", 7);
+
+    // Display updated appointments
+    mySchedule.displayAppointments();
+
     return 0;
 }

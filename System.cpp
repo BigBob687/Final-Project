@@ -24,6 +24,7 @@ void System::displayAppointments() const {
 //Is the main Menu gives the user things to input
 void System::mainMenu() {
     int choice;
+    int days, hours;
     string name;
     string temp;
     //while loop for the menu
@@ -65,16 +66,23 @@ void System::mainMenu() {
                 }
                 break;
             case 4: {
-                cin.ignore();
-                string desc;
-                int hrs, mins;
-                cout << "Enter appointment description: ";
-                getline(cin, desc);
-                cout << "Enter hours from now: ";
-                cin >> hrs;
-                cout << "Enter minutes from now: ";
-                cin >> mins;
-                makeAppointment(desc, hrs, mins);
+                cout << "Enter the Patients name of whom wants to make an appointment: " << endl;
+                cin >> name;
+                for(int i = 0; i < Patients.size(); i++) {
+                    if(Patients[i].Name == name) {
+                        cout << "Schedule an appointment for this patient:" << endl;
+                        cout << "Enter how many days from now: ";
+                        cin >> days;
+                        cout << "Enter how many hours from now: ";
+                        cin >> hours;
+                        string appointmentDesc = "Initial appointment for " + name;
+                        schedule.makeAppointment(appointmentDesc, days, hours);
+                        cin.ignore();
+                    }
+                    else {
+                        cout << "This patient is not found" << endl;
+                    }
+                }
                 break;
             }
             case 5:

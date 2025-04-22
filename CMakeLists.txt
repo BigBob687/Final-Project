@@ -7,4 +7,6 @@ add_executable(Final_Project main.cpp
         Patient_Registry.cpp
         Patient_Registry.h
         System.cpp
-        System.h)
+        System.h
+        Schedule.cpp
+        Schedule.h)

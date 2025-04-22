@@ -11,12 +11,12 @@ Schedule::Schedule() {}
 /**
  *
  * @param description
+ * @param days
  * @param hours
- * @param minutes
  */
-void Schedule::makeAppointment(const string& description, int hours, int minutes) {
+void Schedule::makeAppointment(const string& description, int days, int hours) {
     auto now = chrono::system_clock::now();
-    auto appointmentTime = now + chrono::hours(hours) + chrono::minutes(minutes);
+    auto appointmentTime = now + chrono::days(days) + chrono::hours(hours);
     appointments.push_back({description, appointmentTime});
 }
 

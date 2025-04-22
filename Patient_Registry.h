@@ -27,7 +27,7 @@ class Patient_Registry {
 
     //Creating the Registry Constructor
     Patient_Registry(string name, string age, string gender, string illness, string DN,
-        string NN, string IN, string meds, string dt);
+        string NN, string IN, string meds, string dt, string fua);
 };
 
 

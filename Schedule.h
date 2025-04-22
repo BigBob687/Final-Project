@@ -7,8 +7,8 @@
 #include <string>
 using namespace std;
 struct Appointment {
-    std::string description;
-    std::chrono::system_clock::time_point time;
+    string description;
+    chrono::system_clock::time_point time;
 };
 
 class Schedule {
@@ -21,9 +21,9 @@ public:
      *
      * @param description
      * @param hours
-     * @param minutes
+     * @param days
      */
-    void makeAppointment(const string& description, int hours, int minutes);
+    void makeAppointment(const string& description, int days, int hours);
 
     // Follow up on an existing appointment by scheduling a follow-up after a given duration
     /**
@@ -46,7 +46,7 @@ public:
     bool isAppointmentScheduled(const chrono::system_clock::time_point& time) const;
 
 private:
-    std::vector<Appointment> appointments;
+    vector<Appointment> appointments;
 };
 
 #endif // SCHEDULE_H

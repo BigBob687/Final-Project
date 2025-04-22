@@ -132,7 +132,7 @@ void System::AddPatient() {
 
     string appointmentDesc = "Initial appointment for " + name;
     schedule.makeAppointment(appointmentDesc, days, hours);
-    cout << "Appointment scheduled successfully!\n";
+    cout << "Patient has been successfully created\n"<<endl;
 
     // Store appointment info in DT and SA
     dt = "Scheduled in " + to_string(days) + " day(s) and " + to_string(hours) + " hour(s)";

@@ -36,7 +36,7 @@ void System::mainMenu() {
             "4. Schedule a Appointment with Patient\n"
             "5. Create a Follow Up with a Patient\n"
             "6. Display ALL Patients\n"
-            "7. Display ALL appoinments\n"
+            "7. Display ALL Appointments\n"
             "8. Exit\n"
             "(ENTER A NUMBER (1-8)"<< endl;
         cin >> choice;

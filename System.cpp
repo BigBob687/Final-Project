@@ -152,6 +152,10 @@ void System::AddPatient() {
 }
 
 //Displays Details for User
+/**
+ * 
+ * @param name 
+ */
 void System::DisplayDetails(string name) {
     string choice;
     int selection;
@@ -217,6 +221,8 @@ void System::DisplayDetails(string name) {
         cout << "Patient not found.\n";
     }
 }
+
+
 void System::createFollowUp() {
     cin.ignore();
     string patientName;

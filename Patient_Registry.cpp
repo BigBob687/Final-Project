@@ -3,6 +3,8 @@
 //
 
 #include "Patient_Registry.h"
+
+//Creates the patient Registry
 Patient_Registry::Patient_Registry(string name, string age, string gender, string illness, string DN,
     string NN, string IN, string meds, string dt, string fua) {
 

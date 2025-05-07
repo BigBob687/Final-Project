@@ -6,8 +6,11 @@
 
 #include <iostream>
 
+#include "DataBase.h"
+DataBase Storage;
 System::System() {
     Patients = {};
+
 }
 // These wrap Schedule functionality
 void System::makeAppointment(const string& description, int hours, int minutes) {
@@ -66,6 +69,7 @@ void System::mainMenu() {
                 }
                 break;
             case 4: {
+                //Creates the appointment of the patietns and schedules it
                 cout << "Enter the Patients name of whom wants to make an appointment: " << endl;
                 cin >> name;
                 for(int i = 0; i < Patients.size(); i++) {
@@ -89,8 +93,11 @@ void System::mainMenu() {
                 createFollowUp();
             break;
             case 6:
+                //Calls the patients through *this by getting system in.
+                Storage.callAllPatients(*this);
             break;
             case 7:
+                //Displays appointments
                 displayAppointments();
             break;
             case 8:

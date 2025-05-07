@@ -1,8 +1,14 @@
 #include <iostream>
+#include "Schedule.h"
 #include "System.h"
 
 int main() {
-    System system;
-    system.mainMenu();
+    Schedule mySchedule;
+    System mySystem;
+    // Create appointments
+
+    mySystem.mainMenu();
+
+
     return 0;
 }

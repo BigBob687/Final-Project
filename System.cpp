@@ -74,7 +74,6 @@ void System::mainMenu() {
                 //If input call Insurance
                 cout << "Enter the Patients name whose insurance you want to see: " << endl;
                 cin >> name;
-                //Calling this makes it go infinetly for some reason FIX IT
                 for(int i = 0; i < Patients.size(); i++) {
                     if(Patients[i].Name == name) {
                          cout << Patients[i].InsuranceName << endl;
@@ -90,13 +89,16 @@ void System::mainMenu() {
                 cin >> name;
                 for(int i = 0; i < Patients.size(); i++) {
                     if(Patients[i].Name == name) {
+                        string appointmentDesc;
                         cout << "Schedule an appointment for this patient:" << endl;
+                        cout << "Please enter the description for your appointment: ";
+                        cin >> appointmentDesc;
                         cout << "Enter how many days from now: ";
                         cin >> days;
                         cout << "Enter how many hours from now: ";
                         cin >> hours;
-                        string appointmentDesc = "Initial appointment for " + name;
                         schedule.makeAppointment(appointmentDesc, days, hours);
+                        Patients[i].SA += "\n"+appointmentDesc;
                         cin.ignore();
                     }
                     else {
@@ -155,14 +157,17 @@ void System::AddPatient() {
 
     // Ask for appointment time
     int days, hours;
-    cout << "Schedule an appointment for this patient:" << endl;
+    string appointmentDesc;
+    cout << "Schedule an appointment for this patient: "<<endl;
+    cout << "Please enter the description for your appointment: ";
+    cin >> appointmentDesc;
     cout << "Enter how many days from now: ";
     cin >> days;
     cout << "Enter how many hours from now: ";
     cin >> hours;
     cin.ignore(); // Clear input buffer
 
-    string appointmentDesc = "Initial appointment for " + name;
+
     schedule.makeAppointment(appointmentDesc, days, hours);
     cout << "Patient has been successfully created\n"<<endl;
 
@@ -240,9 +245,9 @@ void System::DisplayDetails(string name) {
             break;
         }
     }
-
     if (!found) {
         cout << "Patient not found.\n";
+
     }
 }
 

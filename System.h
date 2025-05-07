@@ -26,7 +26,7 @@ public:
     void makeAppointment(const string& description, int hours, int minutes);
 
     /**
-     * A function to make follow-up appointments through the system
+     * A function to make follow-up` appointments through the system
      * @param previousDescription
      * @param followUpDescription
      * @param days

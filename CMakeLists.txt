@@ -9,4 +9,7 @@ add_executable(Final_Project main.cpp
         System.cpp
         System.h
         Schedule.cpp
-        Schedule.h)
+        Schedule.h
+        DataBase.cpp
+        DataBase.h
+        DataBase.cpp)

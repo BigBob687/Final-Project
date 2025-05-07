@@ -36,7 +36,11 @@ void System::followUpAppointment(const string& previousDescription, const string
 void System::displayAppointments() const {
     schedule.displayAppointments();
 }
-//Is the main Menu gives the user things to input
+
+/**
+ * A function that is the main menu for the system
+ * Displays options for the users to input
+ */
 void System::mainMenu() {
     int choice;
     int days, hours;
@@ -118,8 +122,9 @@ void System::mainMenu() {
 
     }
 }
-
-//Adds the Patient to Vector
+/**
+ * A function to create a patient and add them to the patient vector in the Patient_Registry class
+ */
 void System::AddPatient() {
     cin.ignore();
     string name, age, gender, illness, doctor, nurse, insurance, medication, dt, fua;
@@ -172,7 +177,7 @@ void System::AddPatient() {
 
 //Displays Details for User
 /**
- * 
+ * A function to display one or all of a patients details
  * @param name 
  */
 void System::DisplayDetails(string name) {

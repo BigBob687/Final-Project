@@ -6,7 +6,7 @@
 
 //Creates the patient Registry
 /**
- * 
+ * Allows the creation of patients and then adds them to a vector
  * @param name 
  * @param age 
  * @param gender 

@@ -18,7 +18,7 @@ public:
 
     // Make an appointment with a description and scheduled time (in hours and minutes from now)
     /**
-     *
+     * A function to create appointments through the system using the Schedule class
      * @param description
      * @param hours
      * @param days
@@ -27,7 +27,7 @@ public:
 
     // Follow up on an existing appointment by scheduling a follow-up after a given duration
     /**
-     *
+     * A function to create follow-up appointments through the system using the Schedule class
      * @param previousDescription
      * @param followUpDescription
      * @param days
@@ -39,7 +39,7 @@ public:
 
     // Check if an appointment is scheduled at a given time
     /**
-     *
+     * A function to check if the appointment is made
      * @param time
      * @return bool
      */

@@ -18,7 +18,7 @@ public:
 
     // Expose Schedule functionality to main
     /**
-     *
+     * A function to make appointments through the system
      * @param description
      * @param hours
      * @param minutes
@@ -26,7 +26,7 @@ public:
     void makeAppointment(const string& description, int hours, int minutes);
 
     /**
-     *
+     * A function to make follow-up appointments through the system
      * @param previousDescription
      * @param followUpDescription
      * @param days

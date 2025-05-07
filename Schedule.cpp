@@ -9,7 +9,7 @@ Schedule::Schedule() {}
 
 // Make an appointment
 /**
- *
+ * A function to create appointments
  * @param description
  * @param days
  * @param hours
@@ -22,7 +22,7 @@ void Schedule::makeAppointment(const string& description, int days, int hours) {
 
 // Follow up on an existing appointment
 /**
- *
+ * A function to create follow-up appointments
  * @param previousDescription
  * @param followUpDescription
  * @param days
@@ -39,7 +39,9 @@ void Schedule::followUpAppointment(const string& previousDescription, const stri
 }
 
 // Display all appointments
-
+/**
+ * A function to display all of appointments
+ */
 void Schedule::displayAppointments() const {
     cout << "Scheduled Appointments:" << endl;
     for (const auto& appointment : appointments) {
@@ -50,7 +52,7 @@ void Schedule::displayAppointments() const {
 
 // Check if an appointment is scheduled at a given time
 /**
- *
+ * A function to check if the appointment exists
  * @param time
  * @return bool
  */

@@ -13,10 +13,22 @@ System::System() {
 
 }
 // These wrap Schedule functionality
+/**
+ * 
+ * @param description 
+ * @param hours 
+ * @param minutes 
+ */
 void System::makeAppointment(const string& description, int hours, int minutes) {
     schedule.makeAppointment(description, hours, minutes);
 }
 
+/**
+ * 
+ * @param previousDescription 
+ * @param followUpDescription 
+ * @param days 
+ */
 void System::followUpAppointment(const string& previousDescription, const string& followUpDescription, int days) {
     schedule.followUpAppointment(previousDescription, followUpDescription, days);
 }

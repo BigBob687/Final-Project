@@ -17,8 +17,22 @@ public:
     vector<Patient_Registry> Patients;
 
     // Expose Schedule functionality to main
+    /**
+     *
+     * @param description
+     * @param hours
+     * @param minutes
+     */
     void makeAppointment(const string& description, int hours, int minutes);
+
+    /**
+     *
+     * @param previousDescription
+     * @param followUpDescription
+     * @param days
+     */
     void followUpAppointment(const string& previousDescription, const string& followUpDescription, int days);
+
     void displayAppointments() const;
 
     void mainMenu();             // Already handles user interaction

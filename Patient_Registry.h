@@ -26,8 +26,21 @@ class Patient_Registry {
     string FUA;
 
     //Creating the Registry Constructor
+    /**
+     * 
+     * @param name 
+     * @param age 
+     * @param gender 
+     * @param illness 
+     * @param DN 
+     * @param NN 
+     * @param IN 
+     * @param meds 
+     * @param dt 
+     * @param fua 
+     */
     Patient_Registry(string name, string age, string gender, string illness, string DN,
-        string NN, string IN, string meds, string dt, string fua);
+                     string NN, string IN, string meds, string dt, string fua);
 };
 
 

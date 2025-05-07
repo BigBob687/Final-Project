@@ -7,6 +7,10 @@
 #include "System.h"
 using namespace std;
 
+/**
+ *
+ * @param system
+ */
 void DataBase::callAllPatients(System& system) {
 
 //Prints out the paitents Vector to see all the paitients inside of it
